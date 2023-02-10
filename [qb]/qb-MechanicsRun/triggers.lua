@@ -1,0 +1,3 @@
+Triggers = {
+    AddMoney = "MechanicsRun:GiveMoney"
+}

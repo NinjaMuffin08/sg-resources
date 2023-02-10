@@ -1,0 +1,103 @@
+<!--
+
+    Copyright (c) 2021 Toujou Studios
+    Made by IanToujou using Bootstrap
+
+    If you encounter any issues or have any questions,
+    take a look at this project's Github page:
+    https://github.com/IanToujou/FiveM-Modern-Loadingscreen
+
+    You are free to use this asset under the GPL 3.0 License.
+    https://github.com/IanToujou/FiveM-Modern-Loadingscreen/blob/master/LICENSE
+
+-->
+
+<!DOCTYPE html>
+<html style="margin: 1px;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Server Loading</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Features-Clean.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body style="background-color: rgb(13,14,24);">
+    <div class="features-clean" style="background-color: rgba(255,255,255,0);">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center" style="color: rgb(255,255,255);font-size: 50px;">[EN] Saints Gaming</h2>
+                <p class="text-center" style="color: rgb(255,255,255);font-size: 21px;"><br>Zombie RPG \ RP </p>
+            </div>
+            <div class="row features">
+                <div class="col-sm-6 col-lg-4 item"><i class="fa fa-map-marker icon"></i>
+                    <h3 class="name" style="color: rgb(255,255,255);">Park Anywhere</h3>
+                    <p class="description" style="color: rgb(255,255,255);"></p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="fa fa-clock-o icon"></i>
+                    <h3 class="name" style="color: rgb(255,255,255);">BETA</h3>
+                    <p class="description" style="color: rgb(255,255,255);"></p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="fa fa-list-alt icon"></i>
+                    <h3 class="name" style="color: rgb(255,255,255);">Zombie Event</h3>
+                    <p class="description" style="color: rgb(255,255,255);"></p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="fa fa-leaf icon"></i>
+                    <h3 class="name" style="color: rgb(255,255,255);">Support us!</h3>
+                    <p class="description" style="color: rgb(255,255,255);">.</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="fa fa-plane icon"></i>
+                    <h3 class="name" style="color: rgb(255,255,255);"></h3>
+                    <p class="description" style="color: rgb(255,255,255);"></p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="fa fa-phone icon"></i>
+                    <h3 class="name" style="color: rgb(255,255,255);">Stuff To Do</h3>
+                    <p class="description" style="color: rgb(255,255,255);"></p>
+                </div>
+            </div>
+        </div>
+        <div class="intro">
+                <p class="text-center" style="color: rgb(255,255,255);font-size: 21px;">Loading...</p>
+        </div>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Change the video ID below -->
+    <iframe id="music-video" allowfullscreen="" frameborder="0" width="0" height="0" src="https://www.youtube.com/embed/Sf8nKgdUoSw?autoplay=1&enablejsapi=1"></iframe>
+
+    <!-- Change the video ID below -->
+	<script>
+
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('music-video', {
+          height: '0',
+          width: '0',
+          videoId: 'Sf8nKgdUoSw',
+          events: {
+            'onReady': function (event) {
+				event.target.setVolume(7);
+				event.target.playVideo();
+			}
+          }
+        });
+      }
+
+    </script>
+
+</body>
+
+</html>

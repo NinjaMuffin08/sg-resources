@@ -1,0 +1,219 @@
+@font-face {
+    font-family: "ChaletComprime";
+    src: url("../fonts/ChaletComprimeCologneSixty.ttf");
+}
+
+body {
+    margin: 0;
+}
+
+#main {
+    opacity: 0;
+    transition: opacity 1000ms;
+}
+
+#main.active,
+#main.active.show-leaderboard #xperience_leaderboard {
+    opacity: 1;
+    transition: opacity 250ms;
+}
+
+.xperience {
+    font-family: "ChaletComprime";
+    width: 100vw;
+    position: absolute;
+    top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.xperience-inner {
+    width: 532px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.xperience-progress {
+    width: calc(100% - 130px);
+    height: 7px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1px;
+}
+
+.xperience-segment {
+    height: 100%;
+    background-color: #1c2b43;
+    margin-right: 4px;
+    width: 100%;
+    position: relative;
+}
+
+.xperience-segment:last-child {
+    margin-right: 0;
+}
+
+.xperience-segment .xperience-indicator--bar {
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background-color: white;
+}
+
+.xperience-segment .xperience-progress--bar {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 0%;
+    background-color: #2e6eb8;
+}
+
+.xperience-remove .xperience-progress--bar {
+    background-color: #d50000;
+}
+
+.xperience-remove .xperience-indicator--bar {
+    background-color: #ff8a80;
+}
+
+.theme-native .xperience-rank {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+}
+
+.theme-native .xperience-rank::before {
+    position: absolute;
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    content: "";
+}
+
+.xperience-rank div {
+    position: absolute;
+    font-size: 40px;
+    z-index: 10;
+}
+
+.xperience-rank svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    stroke: #2e6eb8;
+    fill: none;
+    stroke-width: 80;
+}
+
+.xperience-rank.spin div {
+    animation: spin 250ms linear 0ms forwards;
+}
+
+.xperience-rank.pulse {
+    background-color: transparent;
+    animation: pulse 250ms linear 0ms forwards;
+}
+
+.xperience-rank.pulse::before {
+    background-color: transparent;
+}
+
+.xperience-rank.pulse div {
+    color: #2e6eb8;
+}
+
+.xperience-rank.pulse svg {
+    fill: none;
+    stroke: #fff;
+}
+
+.xperience-rank.highlight {
+    background-color: transparent;
+}
+
+.xperience-rank.highlight::before {
+    background-color: transparent;
+}
+
+.xperience-rank.highlight div {
+    color: #2e6eb8;
+}
+
+.xperience-rank.highlight svg {
+    fill: none;
+    stroke: #fff;
+}
+
+.xperience-data {
+    width: 532px;
+    font-size: 28px;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 31px;
+}
+
+.xperience-data span {
+    width: 48%;
+    display: inline-block;
+    position: relative;
+    text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000,
+        1px 1px 2px #000;
+}
+
+.xperience-data span:first-child {
+    text-align: right;
+    padding-right: 2px;
+}
+
+.xperience-data span:first-child::after {
+    position: absolute;
+    right: -8px;
+    content: "/";
+}
+
+.xperience-data span:last-child {
+    padding-left: 2px;
+}
+
+.xperience:not(.theme-native) .xperience-rank svg {
+    display: none;
+}
+
+@keyframes spin {
+    from {
+        transform: rotateY(180deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
