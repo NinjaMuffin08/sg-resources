@@ -106,7 +106,7 @@ Config.Zombies = {
     SpawnZombieAtDaylight = 60,
     SpawnZombieAtNight    = 90,
 	
-    MinSpawnDistance      = 60,
+    MinSpawnDistance      = 20,
     MaxSpawnDistance      = 90,
     DespawnDistance       = 290,
 
