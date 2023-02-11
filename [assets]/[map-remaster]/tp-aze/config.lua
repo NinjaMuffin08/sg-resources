@@ -98,7 +98,7 @@ Config.NotHealthRecharge = false
 
 
 Config.Zombies = {
-    SpawnDelay        = 4000,     -- The time is in milliseconds, 1000 = 1 second.
+    SpawnDelay        = 1000,     -- The time is in milliseconds, 1000 = 1 second.
 
     -- If you set this to true, zombies will only spawn in zones where you allow.
     SpawnZombiesOnlyInZones = true,
@@ -107,7 +107,7 @@ Config.Zombies = {
     SpawnZombieAtNight    = 90,
 	
     MinSpawnDistance      = 60,
-    MaxSpawnDistance      = 150,
+    MaxSpawnDistance      = 90,
     DespawnDistance       = 290,
 
     AttackPlayersOnShooting = true,

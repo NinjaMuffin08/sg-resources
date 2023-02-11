@@ -31,7 +31,7 @@ Config.CameraIntro = { -- camera locations when doing intro
 }
 -- Allows players to delete their characters
 Config.CanDelete = true
--- This is the default number of slots for EVERY player
+ 
 Config.Slots = 3
 Config.commandslot = 'updatecharslots' -- /updatecharslots 7
 --------------------
