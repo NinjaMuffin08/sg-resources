@@ -604,7 +604,7 @@ function ShowVehicle(currentTarget) {
                     getEl("contentVehicle").innerHTML = '';
                 }
                 if (getEl("vehicleclass")) {
-                    getEl("vehicleclass").innerHTML = ' <img id="vehicle_class_image" src="https://forum.cfx.re/uploads/default/original/4X/b/1/9/b196908c7e5dfcd60aa9dca0020119fa55e184cb.png">';
+                    getEl("vehicleclass").innerHTML = ' <img id="vehicle_class_image" src="https://i.imgur.com/Rcm0fVJ.png">';
                 }     
 
                 if (data.brand && data.name) {
@@ -688,7 +688,7 @@ function ShowVehicle(currentTarget) {
                     getEl("contentVehicle").innerHTML = '';
                 }
                 if (getEl("vehicleclass")) {
-                    getEl("vehicleclass").innerHTML = ' <img id="vehicle_class_image" src="https://forum.cfx.re/uploads/default/original/4X/b/1/9/b196908c7e5dfcd60aa9dca0020119fa55e184cb.png">';
+                    getEl("vehicleclass").innerHTML = ' <img id="vehicle_class_image" src="https://i.imgur.com/Rcm0fVJ.png">';
                 }
 
                 if (data !== undefined && data.brand !== undefined && data.name !== undefined) {
